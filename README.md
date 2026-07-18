@@ -74,6 +74,3 @@ The app logs both to the console and to `logs/system.log`.
 - The service uses `yt-dlp-exec` with `noWarnings` and `noCallHome` enabled to reduce CLI noise.
 - Progress parsing is based on yt-dlp download output and formats ETA into a friendly `h m s` style.
 
-## License
-
-ISC
