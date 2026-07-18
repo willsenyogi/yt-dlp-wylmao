@@ -110,7 +110,7 @@ async function executeDownload(url, options) {
     });
 }
 
-async function downloadVideo(url, format = "bv*+ba/b") {
+async function downloadVideo(url, format = "bestvideo+bestaudio[ext=m4a]/bestvideo+bestaudio/best") {
     logger.info("Starting video download...");
 
     return executeDownload(url, {
