@@ -1,9 +1,11 @@
 const path = require("path");
-const ytDlp = require("yt-dlp-exec");
+const ytDlpExec = require("yt-dlp-exec");
 
 const paths = require("../utils/paths");
 const logger = require("../utils/logger");
 const progress = require("../utils/progress");
+
+const ytDlp = ytDlpExec.create(paths.ytDlp);
 
 const PROGRESS_RENDER_INTERVAL = 800; // ms
 const PROGRESS_LOG_INTERVAL = 8000;   // ms
@@ -59,7 +61,7 @@ async function executeDownload(url, options) {
                 // Ignore non-progress output
                 if (!progressData) {
                     // Uncomment if needed for debugging
-                    // logger.debug(`yt-dlp output: ${line}`);
+                    // logger.error(`yt-dlp: ${line}`);
                     continue;
                 }
 

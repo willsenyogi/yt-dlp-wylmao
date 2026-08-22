@@ -26,6 +26,15 @@ npm install
 
 2. Ensure `bin/yt-dlp.exe` exists and is executable.
 
+## Updating yt-dlp
+
+The project uses the bundled `bin/yt-dlp.exe` binary.
+
+YouTube changes can occasionally cause download errors such as `HTTP Error 403: Forbidden`. Keep the bundled yt-dlp binary up to date by running:
+
+```bash
+bin\yt-dlp.exe -U
+
 ## Usage
 
 Run the app with a YouTube URL:
